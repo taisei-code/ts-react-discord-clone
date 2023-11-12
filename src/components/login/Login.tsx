@@ -12,7 +12,7 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .catch((err) => alert(err.message));
   };
-  console.log(auth)
+  
   return (
     <div className='login'>
       <div className='loginLogo'>

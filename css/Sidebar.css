@@ -1,28 +1,12 @@
 .sidebar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0.3;
-  -webkit-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
+  flex: 0.3;
   height: 100vh;
 }
 .sidebar .sidebarLeft {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background: #202226;
   padding: 7px 15px;
 }
@@ -39,33 +23,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 70%;
 }
 .sidebar .sidebarRight {
   background: #2f3137;
   width: 300px;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 .sidebar .sidebarRight .sidebarTop {
   color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
 }
 .sidebar .sidebarRight .sidebarChannels {
@@ -73,24 +44,12 @@
 }
 .sidebar .sidebarRight .sidebarChannels .sidebarChannelsHeader {
   color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 5px;
 }
 .sidebar .sidebarRight .sidebarChannels .sidebarChannelsHeader .sidebarHeader {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
 .sidebar .sidebarRight .sidebarChannels .sidebarChannelsHeader .sidebarAddIcon {
@@ -99,32 +58,17 @@
 .sidebar .sidebarRight .sidebarFooter {
   position: absolute;
   bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 93%;
   padding: 15px 0;
   border-top: 1px solid #686a6e;
   margin-left: -3px;
 }
 .sidebar .sidebarRight .sidebarFooter .sidebarAccount {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .sidebar .sidebarRight .sidebarFooter .sidebarAccount img {
   width: 60px;
@@ -140,13 +84,7 @@
   color: #686a6e;
 }
 .sidebar .sidebarRight .sidebarFooter .sidebarVoice {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #686a6e;
-}/*# sourceMappingURL=Sidebar.css.map */
+}
