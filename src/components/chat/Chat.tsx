@@ -8,8 +8,8 @@ import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import ChatMessage from './ChatMessage';
 import { useAppSelector } from '../../app/hooks';
 import { db } from '../../firebase';
-import { CollectionReference, DocumentData, DocumentReference, Timestamp, addDoc, collection, onSnapshot, serverTimestamp } from 'firebase/firestore';
-import { MessageSharp } from '@mui/icons-material';
+import { CollectionReference, DocumentData, DocumentReference, Timestamp, addDoc, collection, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+
 
 interface Messages {
   timestamp: Timestamp;
@@ -30,10 +30,15 @@ const Chat = () => {
   const user = useAppSelector((state) => state.user.user);
 
   useEffect(() => {
-    let collectionRef: CollectionReference<DocumentData> = collection(db, "channels", String(channelId), "messages");
+    const collectionRef: CollectionReference<DocumentData> = collection(db, "channels", String(channelId), "messages");
 
-    onSnapshot(collectionRef, (snapshot) => {
-      let results: Messages[] = [];
+    const collectionRefOrderBy = query(
+      collectionRef,
+      orderBy("timestamp", "desc")
+    );
+
+    onSnapshot(collectionRefOrderBy, (snapshot) => {
+      const results: Messages[] = [];
       snapshot.docs.forEach((doc) => {
         results.push({
           timestamp: doc.data().timestamp,
@@ -56,7 +61,7 @@ const Chat = () => {
       timestamp: serverTimestamp(),
       user: user,
     });
-    console.log(docRef);
+    setInputText("");
   }
 
   return (
@@ -76,6 +81,7 @@ const Chat = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setInputText(e.target.value)
             }
+            value={inputText}
           />
           <button
             type="submit"
